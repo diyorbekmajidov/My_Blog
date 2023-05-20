@@ -1,0 +1,10 @@
+
+{% for i in my_table %}
+
+    <dev class="post__title post__item">
+        <h3>
+            <a style=" margin-left: auto; " href="{% url 'index' %}">{{i.name}}</a>
+        </h3>
+    </dev>
+
+{% endfor %}
