@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-
+CKEDITOR_UPLOAD_PATH = "uploads/" # ckeditor
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,11 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # my apps
-    "MyApp.apps.MyappConfig",
+    "My_Blog",
     # third party apps
     "rest_framework",
     "rest_framework.authtoken",
     "ckeditor",
+    "ckeditor_uploader", 
     "corsheaders",
 ]
 
@@ -125,7 +126,12 @@ USE_TZ = True
 
 CORS_ORIGIN_ALLOW_ALL = True # corsheaders
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = 'media/' 
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
