@@ -1,10 +1,7 @@
-
-{% for i in my_table %}
-
-    <dev class="post__title post__item">
-        <h3>
-            <a style=" margin-left: auto; " href="{% url 'index' %}">{{i.name}}</a>
-        </h3>
-    </dev>
-
-{% endfor %}
+<!DOCTYPE html>
+< html lang="{{ LANGUAGE_CODE }}">
+< head>
+    <meta name="description" content={% block meta_description %}{% endblock %} />
+    {% block meta %}
+    < meta charset="UTF-8">
+    < title>My Blog</ title>
