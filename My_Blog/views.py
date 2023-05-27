@@ -9,3 +9,7 @@ def index(request):
     my_post = Post.objects.all()
     return render(request, 'blog/index.html', {'my_post': my_post})
 
+class PostList(APIView):
+    def get(self, request):
+        my_post = Post.objects.all()
+        return render(request, 'blog/index.html', {'my_post': my_post})
