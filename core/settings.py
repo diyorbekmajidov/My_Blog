@@ -20,14 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!*661k74g+ip+xug)02u8689@pcm&d9b&tt(-xz+k(m02h4fd4'
+SECRET_KEY = 'django-insecure-#3d_ue337alim(#9*it5%jrk^*!_yq4(@6pb@p*q-cyhkl(5l!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 
-CKEDITOR_UPLOAD_PATH = "uploads/" # ckeditor
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,21 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # my apps
-    "My_Blog",
-    # third party apps
-    "rest_framework",
-    "rest_framework.authtoken",
-    "ckeditor",
-    "ckeditor_uploader", 
-    "corsheaders",
+    'blog.apps.BlogConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'corsheaders.middleware.CorsMiddleware', # corsheaders
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -124,14 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-CORS_ORIGIN_ALLOW_ALL = True # corsheaders
-
-STATIC_URL = '/static/'
-
-
-MEDIA_URL = "/media/"
-MEDIA_ROOT = 'media/' 
-
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
