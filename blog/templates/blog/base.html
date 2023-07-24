@@ -32,11 +32,11 @@
               <!-- Navbar Right Side -->
               <div class="navbar-nav">
                 {% if user.is_authenticated %}
-                  <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
-                  <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                  <a class="nav-item nav-link" href="#">Profile</a>
+                  <a class="nav-item nav-link" href="#">Logout</a>
                 {% else %}
                 <a href="{% url 'login:login' %}"><h3 class="agileinfo_sign">Sign In </h3></a>
-                
+                <a class="nav-item nav-link" href="#">Register</a>
                 {% endif %}
               </div>
             </div>
