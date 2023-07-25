@@ -2,3 +2,4 @@ Django
 djangorestframework
 django-ckeditor
 django-cors-headers
+django-crispy-forms
