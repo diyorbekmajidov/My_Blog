@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm # Importing the forms from forms.py
 
 
 def register(request):
@@ -18,4 +18,10 @@ def register(request):
 
 @login_required # This decorator will redirect to login page if user is not logged in
 def profile(request):
-    return render(request, 'users/profile.html')
+    u_form = UserUpdateForm() # Creating an instance of the UserUpdateForm
+    p_form = ProfileUpdateForm() # Creating an instance of the ProfileUpdateForm
+    context = {
+        'u_form': u_form,
+        'p_form': p_form
+    }
+    return render(request, 'users/profile.html', context)
